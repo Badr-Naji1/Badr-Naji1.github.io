@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Badr Naji – Junior SOC Analyst Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #0a0a0a;
+      --card: #0f0f10;
+      --muted: #cfcfcf;
+      --text: #f0f0f0;
+      --accent: #00f0ff;
+      --accent-shadow: rgba(0,240,255,0.14);
+      --container-max: 1100px;
+      --base-font: 16px;
+      --transition: 280ms;
+    }
+
+    *{box-sizing:border-box}
+
+    html{
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-size:var(--base-font);
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+
+    .site{
+      width:100%;
+      max-width:var(--container-max);
+      padding:28px 28px;
+      margin:0 auto;
+    }
+
+    .navbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      width:100%;
+      margin-bottom:12px;
+      padding-bottom:12px;
+      border-bottom:1px solid rgba(255,255,255,0.03);
+    }
+
+    .brand h1{
+      margin:0;
+      font-weight:600;
+      font-size:1.05rem;
+      color:var(--accent);
+      letter-spacing:0.2px;
+    }
+
+    header.main-header{
+      text-align:center;
+      margin:28px 0 18px 0;
+    }
+
+    header .intro-title{
+      margin:0;
+      font-size:1.6rem;
+      font-weight:700;
+      color:var(--accent);
+      text-shadow:0 0 8px var(--accent);
+      line-height:1.05;
+    }
+
+    .hero-subtitle{
+      margin:12px 0 0 0;
+      font-size:1rem;
+      font-weight:600;
+      color:#d8d8d8;
+      letter-spacing:0.3px;
+    }
+
+    header .intro{
+      margin-top:12px;
+      font-size:1.05rem;
+      max-width:880px;
+      margin-left:auto;
+      margin-right:auto;
+      color:var(--muted);
+    }
+
+    section{
+      width:100%;
+      max-width:var(--container-max);
+      margin:28px auto;
+    }
+
+    h2.section-heading{
+      margin:0 0 14px 0;
+      font-size:1.25rem;
+      color:var(--accent);
+      font-weight:700;
+      border-bottom:2px solid var(--accent);
+      padding-bottom:8px;
+      text-shadow:0 0 6px var(--accent);
+    }
+
+    p, li{
+      color:var(--muted);
+      margin:0 0 12px 0;
+      font-size:1rem;
+    }
+
+    .project-list{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:18px;
+      align-items:start;
+      margin-top:12px;
+      list-style:none;
+      padding:0;
+    }
+
+    .project-card{
+      background:var(--card);
+      padding:18px;
+      border-left:4px solid var(--accent);
+      border-radius:10px;
+      box-shadow:0 8px 22px var(--accent-shadow);
+      transition: transform var(--transition), box-shadow var(--transition), filter var(--transition), border-color var(--transition);
+      filter: brightness(1.08);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .project-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius:10px;
+      border:1px solid var(--accent);
+      opacity:0.1;
+      transition: opacity var(--transition);
+    }
+
+    .project-card:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px var(--accent-shadow);
+      filter: brightness(1.22);
+    }
+
+    .project-card:hover::before{
+      opacity:0.35;
+    }
+
+    .project-card h3{
+      margin:0 0 8px 0;
+      color:var(--accent);
+      font-size:1rem;
+      font-weight:700;
+      text-shadow:0 0 6px var(--accent);
+    }
+
+    .project-card p{
+      margin:0;
+      color:#c7c7c7;
+      font-size:0.98rem;
+    }
+
+    .tools-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:16px;
+      margin-top:12px;
+    }
+
+    .tool-card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(0,240,255,0.16);
+      border-radius:12px;
+      padding:16px;
+      box-shadow:0 10px 24px rgba(0,0,0,0.28);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .tool-card::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      height:3px;
+      background:var(--accent);
+      opacity:0.9;
+      box-shadow:0 0 12px var(--accent);
+    }
+
+    .tool-card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 16px 34px var(--accent-shadow);
+      border-color:var(--accent);
+    }
+
+    .tool-card h3{
+      margin:4px 0 10px 0;
+      color:var(--text);
+      font-size:1rem;
+      font-weight:700;
+      line-height:1.35;
+    }
+
+    .tool-card p{
+      margin:0;
+      color:#c7c7c7;
+      font-size:0.96rem;
+      line-height:1.6;
+    }
+
+    .certificates{
+      display:grid;
+      gap:14px;
+      margin-top:12px;
+    }
+
+    .certificate{
+      background:var(--card);
+      padding:14px;
+      border-left:4px solid var(--accent);
+      border-radius:8px;
+      box-shadow:0 8px 18px var(--accent-shadow);
+      display:flex;
+      align-items:center;
+      gap:14px;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), filter var(--transition);
+      cursor:pointer;
+    }
+
+    .certificate:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px var(--accent-shadow);
+      border-color: var(--accent);
+      filter: brightness(1.15);
+    }
+
+    .certificate img{
+      max-width:140px;
+      height:auto;
+      display:block;
+    }
+
+    #exercises{ margin-top:8px; }
+
+    .exercise-container{
+      display:grid;
+      gap:22px;
+    }
+
+    .exercise-domain h3{
+      margin:0 0 10px 0;
+      color:var(--accent);
+      font-size:1rem;
+    }
+
+    .exercise-list{
+      display:grid;
+      gap:12px;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    }
+
+    .exercise-card{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      background:var(--card);
+      padding:12px 14px;
+      border-radius:10px;
+      border-left:4px solid var(--accent);
+      text-decoration:none;
+      color:var(--text);
+      box-shadow:0 10px 22px rgba(0,0,0,0.45);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .exercise-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 18px 40px var(--accent-shadow);
+    }
+
+    .icon{
+      width:44px;
+      height:44px;
+      display:inline-block;
+      flex:0 0 44px;
+      color:var(--accent);
+      filter: drop-shadow(0 6px 18px rgba(0,240,255,0.06));
+    }
+
+    .exercise-card span{
+      font-weight:600;
+      color:var(--text);
+    }
+
+    footer{
+      height:36px;
+    }
+
+    @media (min-width:1200px){
+      :root{ --base-font: 17.6px; }
+      header .intro-title{ font-size:1.9rem; }
+      .hero-subtitle{ font-size:1.05rem; }
+      header .intro{ font-size:1.12rem; }
+    }
+
+    @media (max-width:720px){
+      .navbar{
+        flex-direction:column;
+        align-items:start;
+        gap:12px;
+        padding-bottom:6px;
+      }
+
+      .brand h1{ font-size:0.98rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="site" role="main">
+
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="brand">
+        <h1>Badr Naji – SOC / Blue Team Portfolio</h1>
+      </div>
+    </nav>
+
+    <header class="main-header">
+      <div class="intro-title-wrap">
+        <h2 class="intro-title">Badr Naji</h2>
+        <p class="hero-subtitle">Junior SOC Analyst | SIEM Monitoring | Alert Investigation | Incident Triage</p>
+      </div>
+      <p class="intro">Hands-on portfolio focused on simulated SOC investigations, SIEM log analysis, IOC enrichment, MITRE ATT&CK mapping, and structured incident documentation.</p>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2 class="section-heading">More about me</h2>
+        <p>
+          I am an entry-level cybersecurity professional focused on Blue Team operations and Security Operations Center (SOC) work. Through hands-on training environments, I have developed a practical approach to investigating alerts, reviewing system and security events, documenting findings clearly, and following structured workflows during simulated incident analysis. I am especially interested in defensive monitoring, evidence-based decision-making, and continuous improvement as I build toward a Junior SOC Analyst role.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2 class="section-heading">Core SOC Capabilities</h2>
+        <ul class="project-list" aria-label="Core SOC capabilities">
+          <li class="project-card">
+            <h3>Alert Triage & Prioritization</h3>
+            <p>Rapidly assess security alerts to distinguish true positives from false positives, reducing noise and escalating verified incidents.</p>
+          </li>
+          <li class="project-card">
+            <h3>Incident Response Support</h3>
+            <p>Assist in initial containment, evidence collection, and documentation for IR handoff.</p>
+          </li>
+          <li class="project-card">
+            <h3>Incident Documentation</h3>
+            <p>Produce clear, evidence‑based incident summaries and playbook updates for knowledge sharing and process improvement.</p>
+          </li>
+        </ul>
+      </section>
+
+      
+      <section id="certificates">
+        <h2 class="section-heading">Certificates</h2>
+        <div class="certificates">
+          <a href="https://tryhackme.com/p/badr1134444" target="_blank" rel="noopener" style="text-decoration:none;">
+            <div class="certificate">
+              <img src="https://assets.tryhackme.com/img/badges/web-defender.png" alt="TryHackMe SOC Level 1 Certificate" />
+              <div style="flex:1">
+                <h3 style="margin:0;color:var(--text);font-size:1rem">SOC Level 1 Certificate (in progress)</h3>
+                <p style="margin-top:6px;color:#a0a0a0;font-size:0.95rem">TryHackMe · Defensive Security Training</p>
+                <p style="margin-top:8px;color:#c7c7c7;font-size:0.95rem">Practical training focused on SOC workflows, alert investigation, log analysis, and defensive security techniques.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.credly.com/badges/d57ce946-0d9a-4756-ace6-39cd2b123b4d/linked_in?t=t9ovde" target="_blank" rel="noopener" style="text-decoration:none;">
+            <div class="certificate">
+              <img src="https://images.credly.com/size/340x340/images/ef9f86ad-4e53-4dbc-8951-e4cab81ff09e/blob" alt="Google Cybersecurity Certificate" />
+              <div style="flex:1">
+                <h3 style="margin:0;color:var(--text);font-size:1rem">Google Cybersecurity Professional Certificate</h3>
+                <p style="margin-top:6px;color:#a0a0a0;font-size:0.95rem">Google / Coursera · 2026</p>
+                <p style="margin-top:8px;color:#c7c7c7;font-size:0.95rem">Foundational cybersecurity training covering threat detection, incident response, security operations concepts, and SIEM analysis.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://drive.google.com/file/d/1ZEDC9CTlOGnoHzVKgEMaHFuNqIUETnZh/view?usp=sharing" target="_blank" rel="noopener" style="text-decoration:none;">
+            <div class="certificate">
+              <img src="assets/images/diploma.jpg" alt= />
+              <div style="flex:1">
+                <h3 style="margin:0;color:var(--text);font-size:1rem">Bachelor's Degree in Computer Engineering</h3>
+                <p style="margin-top:6px;color:#a0a0a0;font-size:0.95rem">AMA Computer College . 2023</p>
+                <p style="margin-top:8px;color:#c7c7c7;font-size:0.95rem">Computer Engineering graduate with a specialized focus in Network Administration, combining foundational engineering principles with practical experience in secure network design and infrastructure management.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section id="tools">
+        <h2 class="section-heading">Security Tools & Platforms</h2>
+        <p style="margin:8px 0 18px 0;color:var(--muted)">
+          Hands‑on experience with industry‑standard tools and environments during simulated SOC investigations and incident response training.
+        </p>
+        <div class="tools-grid">
+          <div class="tool-card">
+            <h3>SIEM Platforms</h3>
+            <p>Performed log analysis and alert triage using Splunk (SPL queries) and Elastic Stack (Kibana) across multiple attack scenarios.</p>
+          </div>
+          <div class="tool-card">
+            <h3>Threat Intelligence & IOC Analysis</h3>
+            <p>Leveraged VirusTotal, AbuseIPDB, and Hybrid Analysis to enrich indicators, validate malicious domains/IPs, and identify file hashes.</p>
+          </div>
+          <div class="tool-card">
+            <h3>Operating System Log Analysis</h3>
+            <p>Investigation of Windows and Linux logs to identify suspicious activity, authentication anomalies, and system behavior.</p>
+          </div>
+          <div class="tool-card">
+            <h3>Threat Frameworks</h3>
+            <p>Use of the MITRE ATT&CK framework to understand attacker behavior, map techniques, and support structured incident analysis.</p>
+          </div>
+          <div class="tool-card">
+            <h3>Scripting & Automation</h3>
+            <p>Developed basic Python and PowerShell scripts for log parsing, data extraction, and simple automation in security exercises.</p>
+          </div>
+          <div class="tool-card">
+            <h3>Hands-On Cybersecurity Labs</h3>
+            <p>Practical cybersecurity training environments including TryHackMe, Google Cybersecurity labs.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="soc-reports">
+        <h2 class="section-heading">SOC Investigation Reports</h2>
+        <p style="margin:8px 0 18px 0;color:var(--muted)">
+          Simulated SOC alert investigations demonstrating incident triage, log analysis, IOC identification, and structured documentation.
+        </p>
+        <div class="project-list">
+          <a href="assets/reports/tempest-challenge.pdf" target="_blank" rel="noopener" style="text-decoration:none;">
+            <div class="project-card">
+              <h3>Tempest Challenge</h3>
+              <p>Simulated SOC  investigation of a compromised workstation (TEMPEST) where a malicious Word document exploiting CVE-2022-30190 (Follina) initiated a full attack chain</p>
+            </div>
+          </a>
+        </div>
+        <div class="project-list">
+          <a href="assets/reports/benign-challenge.pdf" target="_blank" rel="noopener" style="text-decoration:none;">
+            <div class="project-card">
+              <h3>Benign Challenge</h3>
+              <p>An investigation of HR workstations uncovered an impostor account performing reconnaissance, a scheduled task for persistence, and a LOLBin (certutil.exe) downloading a malicious payload </p>
+            </div>
+          </a>
+        </div>
+        <div class="project-list">
+          <a href="assets/reports/ItsyBitsy-challenge.pdf" target="_blank" rel="noopener" style="text-decoration:none;">
+            <div class="project-card">
+              <h3>ItsyBitsy Challenge</h3>
+              <p>An investigation of HTTP connection logs revealed that an infected host used bitsadmin.exe to download secret.txt from pastebin.com, containing the flag THM{SECRET__CODE}.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section id="exercises">
+        <h2 class="section-heading">Scripting & Automation scripts</h2>
+        <p class="section-subtitle" style="margin:8px 0 18px 0;color:var(--muted)">Structured lab work and technical evidence demonstrating investigation workflows, defensive analysis, and practical cybersecurity skills.</p>
+        <div class="exercise-container">
+          <div class="exercise-domain">
+            <h3>Python scripts</h3>
+            <div class="exercise-list">
+              <a href="https://github.com/Badr-Naji1/ip-allowlist-access-control" target="_blank" class="exercise-card" rel="noopener">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h7l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM13 3.5V9h5"/></svg>
+                <span>ip allowlist access control</span>
+                <p>Python script to automate IP-based access control</p>
+              </a>
+            
+            </div>
+          </div>
+          <div class="exercise-domain">
+            <h3>Powershell scripts</h3>
+            <div class="exercise-list">
+              <a href="https://github.com/Badr-Naji1/Detect-Bruteforce" target="_blank" class="exercise-card" rel="noopener">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5zm3.5 9L9 11l-2.5-3L8 7l3 4-3 4-1.5-1zM12 17h6v-2h-6v2z"/></svg>
+                <span>Detect Bruteforce</span>
+                <p>PowerShell script that scans Windows Security logs for Event ID 4625 (failed logon) and flags source IPs with 10+ failures in the last hour—a strong indicator of credential stuffing or password spraying.</p>
+              </a>
+              
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+  </div>
+</body>
+</html>

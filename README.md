@@ -2,7 +2,6 @@
 
 [![Live Site](https://img.shields.io/badge/Live-Portfolio-00f0ff?style=flat&logo=github)](https://badr-naji1.github.io/)
 [![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-222?logo=github)](https://badr-naji1.github.io/)
-[![License](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
 
 **A hands‑on cybersecurity portfolio demonstrating SOC analysis, SIEM alert investigation, IOC enrichment, incident documentation, and automation scripting.**
 

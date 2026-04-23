@@ -23,17 +23,16 @@
 
 ## 📂 Repository Structure
 badr-naji1.github.io/
-├── index.html # Main portfolio page
-├── README.md # This file
+├── index.html                  # Main portfolio page
+├── README.md                   # This file
 ├── assets/
-│ ├── images/ # Diploma
-│ │ └── diploma.jpg
-│ └── reports/ # PDF incident reports & resume
-│ ├── tempest-challenge.pdf
-│ ├── benign-challenge.pdf
-│ ├── ItsyBitsy-challenge.pdf
-│ └── resume.docx
-
+│   ├── images/                 # Diploma
+│   │   └── diploma.jpg
+│   └── reports/                # PDF incident reports & resume
+│       ├── tempest-challenge.pdf
+│       ├── benign-challenge.pdf
+│       ├── ItsyBitsy-challenge.pdf
+│       └── resume.docx
 ---
 
 ## 🔥 Portfolio Sections

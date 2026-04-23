@@ -28,11 +28,13 @@ badr-naji1.github.io/
 ├── assets/
 │   ├── images/                 # Diploma
 │   │   └── diploma.jpg
-│   └── reports/                # PDF incident reports & resume
+│   └── reports/                # PDF incident reports, transcripts & resume 
 │       ├── tempest-challenge.pdf
 │       ├── benign-challenge.pdf
 │       ├── ItsyBitsy-challenge.pdf
 │       └── resume.docx
+│       └── transcripts.pdf 
+└       
 ---
 
 ## 🔥 Portfolio Sections

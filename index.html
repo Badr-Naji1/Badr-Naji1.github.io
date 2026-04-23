@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Badr Naji – Junior SOC Analyst portfolio. SIEM monitoring, alert triage, incident investigation, SOC reports, and PowerShell/Python automation scripts." />
   <title>Badr Naji – Junior SOC Analyst Portfolio</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -281,8 +282,8 @@
 
     .exercise-card{
       display:flex;
-      gap:12px;
-      align-items:center;
+      flex-direction: column;
+      gap:8px;
       background:var(--card);
       padding:12px 14px;
       border-radius:10px;
@@ -298,6 +299,12 @@
       box-shadow:0 18px 40px var(--accent-shadow);
     }
 
+    .exercise-card .card-header {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
     .icon{
       width:44px;
       height:44px;
@@ -310,6 +317,65 @@
     .exercise-card span{
       font-weight:600;
       color:var(--text);
+    }
+
+    .exercise-card p{
+      margin:0;
+      color:#c7c7c7;
+      font-size:0.9rem;
+      line-height:1.5;
+    }
+
+    /* Contact & Resume download cards */
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 12px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--card);
+      padding: 14px 20px;
+      border-radius: 10px;
+      border-left: 4px solid var(--accent);
+      box-shadow: 0 8px 18px var(--accent-shadow);
+      text-decoration: none;
+      color: var(--text);
+      transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
+    }
+
+    .contact-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px var(--accent-shadow);
+      filter: brightness(1.15);
+    }
+
+    .contact-item svg {
+      flex-shrink: 0;
+    }
+
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: #0a0a0a;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 0 14px var(--accent-shadow);
+      transition: transform var(--transition), box-shadow var(--transition);
+      margin-top: 12px;
+    }
+
+    .btn-download:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 28px var(--accent);
     }
 
     footer{
@@ -360,6 +426,18 @@
         </p>
       </section>
 
+      <!-- Download Resume button (prominent) -->
+      <section id="resume-download">
+        <a href="assets/Reports/resume.docx" class="btn-download" download>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Download Resume (DOCX)
+        </a>
+      </section>
+
       <section id="projects">
         <h2 class="section-heading">Core SOC Capabilities</h2>
         <ul class="project-list" aria-label="Core SOC capabilities">
@@ -386,8 +464,8 @@
             <div class="certificate">
               <img src="https://assets.tryhackme.com/img/badges/web-defender.png" alt="TryHackMe SOC Level 1 Certificate" />
               <div style="flex:1">
-                <h3 style="margin:0;color:var(--text);font-size:1rem">SOC Level 1 Certificate (in progress)</h3>
-                <p style="margin-top:6px;color:#a0a0a0;font-size:0.95rem">TryHackMe · Defensive Security Training</p>
+                <h3 style="margin:0;color:var(--text);font-size:1rem">SOC Level 1 Certificate</h3>
+                <p style="margin-top:6px;color:#a0a0a0;font-size:0.95rem">TryHackMe · Completed: May 2026</p>
                 <p style="margin-top:8px;color:#c7c7c7;font-size:0.95rem">Practical training focused on SOC workflows, alert investigation, log analysis, and defensive security techniques.</p>
               </div>
             </div>
@@ -406,10 +484,10 @@
 
           <a href="https://drive.google.com/file/d/1ZEDC9CTlOGnoHzVKgEMaHFuNqIUETnZh/view?usp=sharing" target="_blank" rel="noopener" style="text-decoration:none;">
             <div class="certificate">
-              <img src="assets/images/diploma.jpg" alt= />
+              <img src="assets/images/diploma.jpg" alt="Bachelor's Degree in Computer Engineering" />
               <div style="flex:1">
                 <h3 style="margin:0;color:var(--text);font-size:1rem">Bachelor's Degree in Computer Engineering</h3>
-                <p style="margin-top:6px;color:#a0a0a0;font-size:0.95rem">AMA Computer College . 2023</p>
+                <p style="margin-top:6px;color:#a0a0a0;font-size:0.95rem">AMA Computer College · 2023</p>
                 <p style="margin-top:8px;color:#c7c7c7;font-size:0.95rem">Computer Engineering graduate with a specialized focus in Network Administration, combining foundational engineering principles with practical experience in secure network design and infrastructure management.</p>
               </div>
             </div>
@@ -456,23 +534,19 @@
           Simulated SOC alert investigations demonstrating incident triage, log analysis, IOC identification, and structured documentation.
         </p>
         <div class="project-list">
-          <a href="assets/Reports/Tempest-Challenge.pdf" target="_blank" rel="noopener" style="text-decoration:none;">
+          <a href="assets/reports/tempest-challenge.pdf" target="_blank" rel="noopener" style="text-decoration:none;">
             <div class="project-card">
               <h3>Tempest Challenge</h3>
-              <p>Simulated SOC  investigation of a compromised workstation (TEMPEST) where a malicious Word document exploiting CVE-2022-30190 (Follina) initiated a full attack chain</p>
+              <p>Simulated SOC investigation of a compromised workstation (TEMPEST) where a malicious Word document exploiting CVE-2022-30190 (Follina) initiated a full attack chain.</p>
             </div>
           </a>
-        </div>
-        <div class="project-list">
-          <a href="assets/Reports/Benign-Challenge.pdf" target="_blank" rel="noopener" style="text-decoration:none;">
+          <a href="assets/reports/benign-challenge.pdf" target="_blank" rel="noopener" style="text-decoration:none;">
             <div class="project-card">
               <h3>Benign Challenge</h3>
-              <p>An investigation of HR workstations uncovered an impostor account performing reconnaissance, a scheduled task for persistence, and a LOLBin (certutil.exe) downloading a malicious payload </p>
+              <p>An investigation of HR workstations uncovered an impostor account performing reconnaissance, a scheduled task for persistence, and a LOLBin (certutil.exe) downloading a malicious payload.</p>
             </div>
           </a>
-        </div>
-        <div class="project-list">
-          <a href="assets/Reports/ItsyBitsy-Challenge.pdf" target="_blank" rel="noopener" style="text-decoration:none;">
+          <a href="assets/reports/ItsyBitsy-challenge.pdf" target="_blank" rel="noopener" style="text-decoration:none;">
             <div class="project-card">
               <h3>ItsyBitsy Challenge</h3>
               <p>An investigation of HTTP connection logs revealed that an infected host used bitsadmin.exe to download secret.txt from pastebin.com, containing the flag THM{SECRET__CODE}.</p>
@@ -489,25 +563,49 @@
             <h3>Python scripts</h3>
             <div class="exercise-list">
               <a href="https://github.com/Badr-Naji1/ip-allowlist-access-control" target="_blank" class="exercise-card" rel="noopener">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h7l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM13 3.5V9h5"/></svg>
-                <span>ip allowlist access control</span>
+                <div class="card-header">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h7l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM13 3.5V9h5"/></svg>
+                  <span>ip allowlist access control</span>
+                </div>
                 <p>Python script to automate IP-based access control</p>
               </a>
-            
             </div>
           </div>
           <div class="exercise-domain">
             <h3>Powershell scripts</h3>
             <div class="exercise-list">
               <a href="https://github.com/Badr-Naji1/Detect-Bruteforce" target="_blank" class="exercise-card" rel="noopener">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5zm3.5 9L9 11l-2.5-3L8 7l3 4-3 4-1.5-1zM12 17h6v-2h-6v2z"/></svg>
-                <span>Detect Bruteforce</span>
+                <div class="card-header">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5zm3.5 9L9 11l-2.5-3L8 7l3 4-3 4-1.5-1zM12 17h6v-2h-6v2z"/></svg>
+                  <span>Detect Bruteforce</span>
+                </div>
                 <p>PowerShell script that scans Windows Security logs for Event ID 4625 (failed logon) and flags source IPs with 10+ failures in the last hour—a strong indicator of credential stuffing or password spraying.</p>
               </a>
-              
             </div>
           </div>
-          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <h2 class="section-heading">Let's Connect</h2>
+        <p style="margin:8px 0 18px 0;color:var(--muted)">
+          I'm always open to discussing new opportunities, collaborations, or just sharing knowledge. Feel free to reach out.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:Badrnaji.work@gmail.com" class="contact-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <span>Badrnaji.work@gmail.com</span>
+          </a>
+          <a href="https://linkedin.com/in/badr-naji" target="_blank" rel="noopener" class="contact-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--accent)">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            <span>linkedin.com/in/badr-naji</span>
+          </a>
         </div>
       </section>
     </main>

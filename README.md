@@ -34,13 +34,15 @@ badr-naji1.github.io/
 
 │   │   └── diploma.jpg
 
-│   └── reports/                # PDF incident reports, transcripts & resume 
+│   └── Reports/                # PDF incident reports, transcripts & resume 
 
-│   │    ├── tempest-challenge.pdf
+│   │    ├── Boogeyman1-Challenge.pdf
 
-│   │     ├── benign-challenge.pdf
+│   │    ├── Tempest-Challenge.pdf
 
-│   │    ├── ItsyBitsy-challenge.pdf
+│   │     ├── Benign-Challenge.pdf
+
+│   │    ├── ItsyBitsy-Challenge.pdf
 
 │    │   └── resume.docx
  

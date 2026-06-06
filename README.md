@@ -54,7 +54,7 @@ badr-naji1.github.io/
 
 - **About Me** – Entry‑level SOC analyst background, Blue Team focus.
 - **Core SOC Capabilities** – Alert triage, incident response support, documentation.
-- **Certificates** – Google Cybersecurity Certificate, SOC Level 1 (May 2026), B.S. Computer Engineering.
+- **Certificates** – ISC2 CC (Certified in Cybersecurity), GCP Google Cybersecurity Professional Certificate, TryHackME SAL1, B.S. Computer Engineering.
 - **Security Tools & Platforms** – Splunk, Elastic Stack (Kibana), VirusTotal, AbuseIPDB, Hybrid Analysis, MITRE ATT&CK.
 - **SOC Investigation Reports** – Three simulated incident reports (Tempest, Benign, ItsyBitsy) with full attack chain analysis.
 - **Scripting & Automation** – Links to separate GitHub repos for PowerShell and Python security tools.
